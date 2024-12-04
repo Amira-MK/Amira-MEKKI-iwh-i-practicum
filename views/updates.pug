@@ -1,0 +1,23 @@
+// views/updates.pug
+
+doctype html
+link(rel='stylesheet', href='/css/style.css')
+
+html
+    head
+        title= title
+    body
+        h1= title
+        form(action="/update-cobj", method="POST")
+            label(for="name") Pet Name:
+            input(type="text", name="name", id="name")
+            br
+            label(for="nickname") Pet Nickname:
+            input(type="text", name="nickname", id="nickname")
+            br
+            label(for="age") Pet Age:
+            input(type="number", name="age", id="age")
+            br
+            button(type="submit") Submit
+        br
+        a(href="/") Return to the homepage
