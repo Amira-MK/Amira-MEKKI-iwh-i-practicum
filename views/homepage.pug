@@ -1,0 +1,24 @@
+// views/homepage.pug
+
+doctype html
+link(rel='stylesheet', href='/css/style.css')
+html
+    head
+        title= title
+    body
+        h1= title
+        //- a(href="/update-cobj") Add to this table
+        a(href='/update-cobj', class='add-link') Add to this table
+
+        table
+            thead
+                tr
+                    th Name
+                    th Nickname
+                    th Age
+            tbody
+                each pet in pets
+                    tr
+                        td= pet.properties.name
+                        td= pet.properties.nickname
+                        td= pet.properties.age
